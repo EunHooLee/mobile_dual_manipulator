@@ -14,7 +14,7 @@ roslaunch dualarm_moveit dualarm_bringup_rviz.launch
 If you want to move the mobile platform, you can use the command:
 ```
 rostopic pub /vel geometry_msgs/Twist "linear:
-  x: 0.0
+  x: 0.1
   y: 0.0
   z: 0.0
 angular:
