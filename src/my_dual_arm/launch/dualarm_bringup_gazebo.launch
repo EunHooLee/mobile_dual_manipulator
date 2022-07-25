@@ -1,9 +1,0 @@
-<launch>
-
-  <include file="$(find dualarm_moveit)/launch/gazebo.launch"/>
-
-  <!-- <include file="$(find dualarm_moveit)/launch/gazebo_states.launch"/> -->
-<!-- 
-  <include file="$(find dualarm_moveit)/launch/ros_controllers.launch"/> -->
-
-</launch>

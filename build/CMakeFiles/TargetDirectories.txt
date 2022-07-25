@@ -50,13 +50,6 @@
 /home/leh/catkin_ws/build/mservo_manipulator_control-main/move_robot/CMakeFiles/rebuild_cache.dir
 /home/leh/catkin_ws/build/mservo_manipulator_control-main/move_robot/CMakeFiles/edit_cache.dir
 /home/leh/catkin_ws/build/mservo_manipulator_control-main/move_robot/CMakeFiles/test.dir
-/home/leh/catkin_ws/build/my_dual_arm/CMakeFiles/install/strip.dir
-/home/leh/catkin_ws/build/my_dual_arm/CMakeFiles/install/local.dir
-/home/leh/catkin_ws/build/my_dual_arm/CMakeFiles/install.dir
-/home/leh/catkin_ws/build/my_dual_arm/CMakeFiles/list_install_components.dir
-/home/leh/catkin_ws/build/my_dual_arm/CMakeFiles/rebuild_cache.dir
-/home/leh/catkin_ws/build/my_dual_arm/CMakeFiles/edit_cache.dir
-/home/leh/catkin_ws/build/my_dual_arm/CMakeFiles/test.dir
 /home/leh/catkin_ws/build/velodyne_simulator-master/velodyne_description/CMakeFiles/install/strip.dir
 /home/leh/catkin_ws/build/velodyne_simulator-master/velodyne_description/CMakeFiles/install/local.dir
 /home/leh/catkin_ws/build/velodyne_simulator-master/velodyne_description/CMakeFiles/install.dir

@@ -288,9 +288,6 @@
 
 
   <!--MANIPULATOR-->
-
-
-
   <joint
     name="base_joint_left"
     type="fixed">
@@ -304,6 +301,10 @@
     <axis
       xyz="0 0 0" />
   </joint>
+
+
+
+
 
 
   <link
@@ -447,11 +448,13 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 0 .09"
         rpy="0 0 0" />
       <geometry>
+<!--
         <mesh
-          filename="package://dualarm_config/meshes/mani1_link2.STL" />
+          filename="package://dualarm_config/meshes/mani1_link2.STL" /> -->
+        <box size=".15 .16 .19"/>
       </geometry>
     </collision>
   </link>
@@ -512,11 +515,12 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 -0.13 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://dualarm_config/meshes/mani1_link3.STL" />
+        <!--<mesh
+          filename="package://dualarm_config/meshes/mani1_link3.STL" />-->
+        <box size=".12 .24 .12"/>
       </geometry>
     </collision>
   </link>
@@ -577,11 +581,12 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 0 .09"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://dualarm_config/meshes/mani1_link4.STL" />
+        <!--<mesh
+          filename="package://dualarm_config/meshes/mani1_link4.STL" />-->
+        <box size=".1 .1 .18"/>
       </geometry>
     </collision>
   </link>
@@ -642,11 +647,12 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 -0.11 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://dualarm_config/meshes/mani1_link5.STL" />
+        <!--<mesh
+          filename="package://dualarm_config/meshes/mani1_link5.STL" />-->
+        <box size=".09 .20 .09"/>
       </geometry>
     </collision>
   </link>
@@ -707,11 +713,12 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 0 .09"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://dualarm_config/meshes/mani1_link6.STL" />
+        <!--<mesh
+          filename="package://dualarm_config/meshes/mani1_link6.STL" /> -->
+	<box size=".09 .08 .18"/>
       </geometry>
     </collision>
   </link>
@@ -772,11 +779,12 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 -0.09 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://dualarm_config/meshes/mani1_link7.STL" />
+        <!--<mesh
+          filename="package://dualarm_config/meshes/mani1_link7.STL" />-->
+        <box size=".08 .18 .08"/>
       </geometry>
     </collision>
   </link>
@@ -837,11 +845,12 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 0 0.08"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://dualarm_config/meshes/mani1_eef.STL" />
+        <!--<mesh
+          filename="package://dualarm_config/meshes/mani1_eef.STL" />-->
+	<box size=".16 .18 .16"/>
       </geometry>
     </collision>
   </link>
@@ -869,6 +878,10 @@
       velocity="0.8" />
   </joint>
 
+
+<!-- distance between two manipulator is 46cm (=0.46/2 =0.23) -->
+<!-- height between base origin to manipulator base is 11.2cm (=0.112) -->
+
   <joint
     name="base_joint_right"
     type="fixed">
@@ -883,7 +896,7 @@
       xyz="0 0 0" />
   </joint>
 
-
+<!-- Mani2 base -->
   <link
     name="mani2_base">
     <inertial>
@@ -1299,11 +1312,12 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 -0.03 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://dualarm_config/meshes/mani2_link7.STL" />
+        <!--<mesh
+          filename="package://dualarm_config/meshes/mani2_link7.STL" />-->
+	<box size=".08 .13 .16"/>
       </geometry>
     </collision>
   </link>
@@ -1386,7 +1400,10 @@
 
 
 
-<!--transmissions-->
+
+
+<!-- Transmissions for ROS Control -->
+
   <transmission name="left_tran1">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="mani1_joint1">
@@ -1457,6 +1474,10 @@
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
+
+
+
+
 
 
   <transmission name="right_tran1">
@@ -1531,11 +1552,15 @@
   </transmission>
 
 
+  <!-- ros_control plugin -->
   <gazebo>
     <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
       <robotNamespace>/dualarm</robotNamespace>
     </plugin>
   </gazebo>
+
+
+  
 
   <!-- Velodyne sensor -->
   <!-- <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>

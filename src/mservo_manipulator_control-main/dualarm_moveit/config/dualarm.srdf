@@ -33,6 +33,15 @@
         <joint name="mani1_joint6" value="0" />
         <joint name="mani1_joint7" value="0" />
     </group_state>
+    <group_state name="mani1_home2" group="manipulator1">
+        <joint name="mani1_joint1" value="-1.5708" />
+        <joint name="mani1_joint2" value="-0.1745" />
+        <joint name="mani1_joint3" value="0" />
+        <joint name="mani1_joint4" value="-1.3963" />
+        <joint name="mani1_joint5" value="0" />
+        <joint name="mani1_joint6" value="-1.5708" />
+        <joint name="mani1_joint7" value="0" />
+    </group_state>
     <group_state name="mani2_home" group="manipulator2">
         <joint name="mani2_joint1" value="0" />
         <joint name="mani2_joint2" value="0" />
@@ -125,13 +134,21 @@
     <disable_collisions link1="mani1_link5" link2="mani1_link6" reason="Adjacent" />
     <disable_collisions link1="mani1_link5" link2="mani1_link7" reason="Never" />
     <disable_collisions link1="mani1_link6" link2="mani1_link7" reason="Adjacent" />
-    <disable_collisions link1="mani2_base" link2="mani2_link2" reason="Adjacent" />
+    <disable_collisions link1="mani2_base" link2="mani2_link1" reason="Adjacent" />
+    <disable_collisions link1="mani2_base" link2="mani2_link2" reason="Never" />
     <disable_collisions link1="mani2_base" link2="mani2_link3" reason="Never" />
     <disable_collisions link1="mani2_base" link2="mani2_link4" reason="Never" />
     <disable_collisions link1="mani2_base" link2="mani2_link5" reason="Never" />
     <disable_collisions link1="mani2_base" link2="mani2_link6" reason="Never" />
     <disable_collisions link1="mani2_base" link2="mani2_link7" reason="Never" />
     <disable_collisions link1="mani2_base" link2="mani2_link8" reason="Never" />
+    <disable_collisions link1="mani2_link1" link2="mani2_link2" reason="Adjacent" />
+    <disable_collisions link1="mani2_link1" link2="mani2_link3" reason="Never" />
+    <disable_collisions link1="mani2_link1" link2="mani2_link4" reason="Never" />
+    <disable_collisions link1="mani2_link1" link2="mani2_link5" reason="Never" />
+    <disable_collisions link1="mani2_link1" link2="mani2_link6" reason="Never" />
+    <disable_collisions link1="mani2_link1" link2="mani2_link7" reason="Never" />
+    <disable_collisions link1="mani2_link1" link2="mani2_link8" reason="Never" />
     <disable_collisions link1="mani2_link2" link2="mani2_link3" reason="Adjacent" />
     <disable_collisions link1="mani2_link2" link2="mani2_link4" reason="Never" />
     <disable_collisions link1="mani2_link2" link2="mani2_link5" reason="Never" />

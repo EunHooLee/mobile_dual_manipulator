@@ -1,31 +1,33 @@
+<!-- version 2022.06.10 -->
+
 <robot
   name="dualarm">
 
 
   <!-- make dummy joint -->
-<!-- 
+
 <joint name="dummy_joint" type="fixed">
     <origin xyz="0 0 0" rpy="0 0 0" />
     <child link="base_link"/>
     <parent link="dummy_link"/>
-  </joint> -->
+  </joint>
 
 
 <!-- make dummy link -->
 
-  <!-- <link name="dummy_link">
+  <link name="dummy_link">
   </link>
 
   <gazebo reference="dummy_link">
     <material>Gazebo/White</material>
   </gazebo>
- -->
+
 
   <link
     name="base_link">
     <inertial>
       <origin
-        xyz="0.32 0.225 0.1" 
+        xyz="0.32 0.225 0.1"
         rpy="0 0 0" />
       <mass
         value="100" />
@@ -53,7 +55,7 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="-0.32 -0.225 0"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -67,10 +69,107 @@
   </gazebo>
 
 
+<!-- lidar & camera, table -->
+
+  <link name="lidar1">
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size=".08 .08 .06"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size=".08 .08 .06"/>
+      </geometry>
+    </collision>
+
+  </link>
+  <gazebo reference="lidar1">              
+    		<material>Gazebo/White</material>
+  </gazebo>
+  <joint name="lidar1_joint"
+    type="fixed">
+    <origin
+      xyz="-0.28 -0.175 0.40" rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+  <link name="camera">
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size=".15 .7 .05"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size=".15 .7 .05"/>
+      </geometry>
+    </collision>
+
+  </link>
+  <gazebo reference="camera">              
+    		<material>Gazebo/White</material>
+  </gazebo>
+  <joint name="camera_joint"
+    type="fixed">
+    <origin
+      xyz="0 -0.85 0.890"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <link name="table">
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size=".72 .6 .03"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size=".72 .6 .03"/>
+      </geometry>
+    </collision>
+
+  </link>
+  <gazebo reference="table">              
+    		<material>Gazebo/White</material>
+  </gazebo>
+  <joint name="table_joint"
+    type="fixed">
+    <origin
+      xyz="0 -0.45 0.2"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="table" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
 
 
 
-<!-- distance between two manipulator is 46cm (=0.46/2 =.23)0 -->
+<!-- distance between two manipulator is 46cm (=0.46/2 =0.23) -->
 <!-- height between base origin to manipulator base is 11.2cm (=0.112) -->
 
   <joint
@@ -233,11 +332,13 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 0 .09"
         rpy="0 0 0" />
       <geometry>
+<!--
         <mesh
-          filename="package://dualarm_config/meshes/mani1_link2.STL" />
+          filename="package://dualarm_config/meshes/mani1_link2.STL" /> -->
+        <box size=".15 .16 .19"/>
       </geometry>
     </collision>
   </link>
@@ -298,11 +399,12 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 -0.13 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://dualarm_config/meshes/mani1_link3.STL" />
+        <!--<mesh
+          filename="package://dualarm_config/meshes/mani1_link3.STL" />-->
+        <box size=".12 .24 .12"/>
       </geometry>
     </collision>
   </link>
@@ -363,11 +465,12 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 0 .09"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://dualarm_config/meshes/mani1_link4.STL" />
+        <!--<mesh
+          filename="package://dualarm_config/meshes/mani1_link4.STL" />-->
+        <box size=".1 .1 .18"/>
       </geometry>
     </collision>
   </link>
@@ -428,11 +531,12 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 -0.11 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://dualarm_config/meshes/mani1_link5.STL" />
+        <!--<mesh
+          filename="package://dualarm_config/meshes/mani1_link5.STL" />-->
+        <box size=".09 .20 .09"/>
       </geometry>
     </collision>
   </link>
@@ -493,11 +597,12 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 0 .09"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://dualarm_config/meshes/mani1_link6.STL" />
+        <!--<mesh
+          filename="package://dualarm_config/meshes/mani1_link6.STL" /> -->
+	<box size=".09 .08 .18"/>
       </geometry>
     </collision>
   </link>
@@ -558,11 +663,12 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 -0.09 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://dualarm_config/meshes/mani1_link7.STL" />
+        <!--<mesh
+          filename="package://dualarm_config/meshes/mani1_link7.STL" />-->
+        <box size=".08 .18 .08"/>
       </geometry>
     </collision>
   </link>
@@ -623,11 +729,12 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 0 0.08"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://dualarm_config/meshes/mani1_eef.STL" />
+        <!--<mesh
+          filename="package://dualarm_config/meshes/mani1_eef.STL" />-->
+	<box size=".16 .18 .16"/>
       </geometry>
     </collision>
   </link>
@@ -654,17 +761,6 @@
       effort="100"
       velocity="0.8" />
   </joint>
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!-- distance between two manipulator is 46cm (=0.46/2 =0.23) -->
@@ -1100,11 +1196,12 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 -0.03 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://dualarm_config/meshes/mani2_link7.STL" />
+        <!--<mesh
+          filename="package://dualarm_config/meshes/mani2_link7.STL" />-->
+	<box size=".08 .13 .16"/>
       </geometry>
     </collision>
   </link>

@@ -2,7 +2,7 @@
    
 > Ubuntu 18.04 LTS 환경에서 개발   
    
-## massage   
+## message   
 > **mservo_msg** : mservo lab에서 사용하는 ros msgs   
 
 ## EtherCAT   

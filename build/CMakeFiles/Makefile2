@@ -56,7 +56,6 @@ CMAKE_BINARY_DIR = /home/leh/catkin_ws/build
 all: gtest/all
 all: mservo_manipulator_control-main/dualarm_moveit/all
 all: mservo_manipulator_control-main/move_robot/all
-all: my_dual_arm/all
 all: velodyne_simulator-master/velodyne_description/all
 all: velodyne_simulator-master/velodyne_simulator/all
 all: mservo_manipulator_control-main/dxl_gripper/all
@@ -71,7 +70,6 @@ all: velodyne_simulator-master/velodyne_gazebo_plugins/all
 preinstall: gtest/preinstall
 preinstall: mservo_manipulator_control-main/dualarm_moveit/preinstall
 preinstall: mservo_manipulator_control-main/move_robot/preinstall
-preinstall: my_dual_arm/preinstall
 preinstall: velodyne_simulator-master/velodyne_description/preinstall
 preinstall: velodyne_simulator-master/velodyne_simulator/preinstall
 preinstall: mservo_manipulator_control-main/dxl_gripper/preinstall
@@ -91,7 +89,6 @@ clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: mservo_manipulator_control-main/dualarm_moveit/clean
 clean: mservo_manipulator_control-main/move_robot/clean
-clean: my_dual_arm/clean
 clean: velodyne_simulator-master/velodyne_description/clean
 clean: velodyne_simulator-master/velodyne_simulator/clean
 clean: mservo_manipulator_control-main/dxl_gripper/clean
@@ -327,24 +324,6 @@ mservo_manipulator_control-main/mservo_msg/clean: mservo_manipulator_control-mai
 mservo_manipulator_control-main/mservo_msg/clean: mservo_manipulator_control-main/mservo_msg/CMakeFiles/mservo_msg_gennodejs.dir/clean
 
 .PHONY : mservo_manipulator_control-main/mservo_msg/clean
-
-#=============================================================================
-# Directory level rules for directory my_dual_arm
-
-# Recursive "all" directory target.
-my_dual_arm/all:
-
-.PHONY : my_dual_arm/all
-
-# Recursive "preinstall" directory target.
-my_dual_arm/preinstall:
-
-.PHONY : my_dual_arm/preinstall
-
-# Recursive "clean" directory target.
-my_dual_arm/clean:
-
-.PHONY : my_dual_arm/clean
 
 #=============================================================================
 # Directory level rules for directory velodyne_simulator-master/velodyne_description

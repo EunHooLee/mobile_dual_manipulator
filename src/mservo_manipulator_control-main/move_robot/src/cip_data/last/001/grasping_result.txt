@@ -1,0 +1,5 @@
+grasping center : (207.000000,332.000000)
+grasping point 1 : (206.068602,322.043470)
+grasping point 2 : (207.931398,341.956530)
+grasping angle : 1.477521
+grasping depth : 0.599073m

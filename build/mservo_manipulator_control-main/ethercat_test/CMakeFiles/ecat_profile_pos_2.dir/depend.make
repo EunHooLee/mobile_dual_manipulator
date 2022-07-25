@@ -3,6 +3,7 @@
 
 mservo_manipulator_control-main/ethercat_test/CMakeFiles/ecat_profile_pos_2.dir/src/ecat_profile_pos_2.cpp.o: /home/leh/catkin_ws/devel/include/ethercat_test/pos.h
 mservo_manipulator_control-main/ethercat_test/CMakeFiles/ecat_profile_pos_2.dir/src/ecat_profile_pos_2.cpp.o: /home/leh/catkin_ws/devel/include/mservo_msg/traj_1d.h
+mservo_manipulator_control-main/ethercat_test/CMakeFiles/ecat_profile_pos_2.dir/src/ecat_profile_pos_2.cpp.o: /home/leh/catkin_ws/devel/include/mservo_msg/traj_2d.h
 mservo_manipulator_control-main/ethercat_test/CMakeFiles/ecat_profile_pos_2.dir/src/ecat_profile_pos_2.cpp.o: /home/leh/catkin_ws/src/mservo_manipulator_control-main/ethercat_test/src/ecat_dc.h
 mservo_manipulator_control-main/ethercat_test/CMakeFiles/ecat_profile_pos_2.dir/src/ecat_profile_pos_2.cpp.o: /home/leh/catkin_ws/src/mservo_manipulator_control-main/ethercat_test/src/ecat_profile_pos_2.cpp
 mservo_manipulator_control-main/ethercat_test/CMakeFiles/ecat_profile_pos_2.dir/src/ecat_profile_pos_2.cpp.o: /home/leh/catkin_ws/src/mservo_manipulator_control-main/ethercat_test/src/pdo_def.h

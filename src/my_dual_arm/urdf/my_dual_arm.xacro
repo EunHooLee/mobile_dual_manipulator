@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<robot name='my_dual_arm', xmlns:xacro="http://www.ros.org/wiki/xacro">
-
-<xacro:include filename="$(find my_dual_arm)/urdf/dualarm_leh.xacro"/>
-
-</robot>

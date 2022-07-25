@@ -60,6 +60,15 @@ dualarm:
       - mani1_joint5
       - mani1_joint6
       - mani1_joint7
+    constraints:
+       mani1_joint1: {goal: 0.05}
+       mani1_joint2: {goal: 0.05}
+       mani1_joint3: {goal: 0.05}
+       mani1_joint4: {goal: 0.05}
+       mani1_joint5: {goal: 0.05}
+       mani1_joint6: {goal: 0.05}
+       mani1_joint7: {goal: 0.05}
+       stopped_velocity_tolerance: 0
 
     pid_gains:
       mani1_joint1: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
@@ -81,6 +90,15 @@ dualarm:
       - mani2_joint5
       - mani2_joint6
       - mani2_joint7
+    constraints:
+       mani2_joint1: {goal: 0.01}
+       mani2_joint2: {goal: 0.01}
+       mani2_joint3: {goal: 0.01}
+       mani2_joint4: {goal: 0.01}
+       mani2_joint5: {goal: 0.01}
+       mani2_joint6: {goal: 0.01}
+       mani2_joint7: {goal: 0.01}
+       stopped_velocity_tolerance: 0
 
     pid_gains:
       mani2_joint1: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}

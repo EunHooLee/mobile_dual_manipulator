@@ -4,6 +4,7 @@
 mservo_manipulator_control-main/ethercat_test/CMakeFiles/ecat_profile_pos_1.dir/src/ecat_profile_pos_1.cpp.o
  /home/leh/catkin_ws/devel/include/ethercat_test/pos.h
  /home/leh/catkin_ws/devel/include/mservo_msg/traj_1d.h
+ /home/leh/catkin_ws/devel/include/mservo_msg/traj_2d.h
  /home/leh/catkin_ws/src/mservo_manipulator_control-main/ethercat_test/src/ecat_dc.h
  /home/leh/catkin_ws/src/mservo_manipulator_control-main/ethercat_test/src/ecat_profile_pos_1.cpp
  /home/leh/catkin_ws/src/mservo_manipulator_control-main/ethercat_test/src/pdo_def.h

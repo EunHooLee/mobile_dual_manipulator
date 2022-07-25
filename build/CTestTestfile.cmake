@@ -7,7 +7,6 @@
 subdirs("gtest")
 subdirs("mservo_manipulator_control-main/dualarm_moveit")
 subdirs("mservo_manipulator_control-main/move_robot")
-subdirs("my_dual_arm")
 subdirs("velodyne_simulator-master/velodyne_description")
 subdirs("velodyne_simulator-master/velodyne_simulator")
 subdirs("mservo_manipulator_control-main/dxl_gripper")
