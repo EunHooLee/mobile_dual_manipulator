@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/leh/catkin_ws/src/mservo_manipulator_control-main/ethercat_test/src/ecat_dc.c
+stdlib.h
+-
+signal.h
+-
+ecat_dc.h
+/home/leh/catkin_ws/src/mservo_manipulator_control-main/ethercat_test/src/ecat_dc.h
+
+/home/leh/catkin_ws/src/mservo_manipulator_control-main/ethercat_test/src/ecat_dc.h
+stdio.h
+-
+signal.h
+-
+string.h
+-
+sys/time.h
+-
+unistd.h
+-
+pthread.h
+-
+math.h
+-
+stdint.h
+-
+

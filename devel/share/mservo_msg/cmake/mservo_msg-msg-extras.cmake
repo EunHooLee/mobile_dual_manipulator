@@ -1,0 +1,2 @@
+set(mservo_msg_MESSAGE_FILES "/home/leh/catkin_ws/src/mservo_manipulator_control-main/mservo_msg/msg/joint_data.msg;/home/leh/catkin_ws/src/mservo_manipulator_control-main/mservo_msg/msg/joint_queue.msg;/home/leh/catkin_ws/src/mservo_manipulator_control-main/mservo_msg/msg/traj_1d.msg;/home/leh/catkin_ws/src/mservo_manipulator_control-main/mservo_msg/msg/traj_2d.msg")
+set(mservo_msg_SERVICE_FILES "")

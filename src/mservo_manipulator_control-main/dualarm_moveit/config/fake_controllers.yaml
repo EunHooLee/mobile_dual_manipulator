@@ -1,0 +1,30 @@
+controller_list:
+  - name: fake_manipulator1_controller
+    joints:
+      - mani1_joint1
+      - mani1_joint2
+      - mani1_joint3
+      - mani1_joint4
+      - mani1_joint5
+      - mani1_joint6
+      - mani1_joint7
+  - name: fake_manipulator2_controller
+    joints:
+      - mani2_joint1
+      - mani2_joint2
+      - mani2_joint3
+      - mani2_joint4
+      - mani2_joint5
+      - mani2_joint6
+      - mani2_joint7
+  - name: fake_endeffector1_controller
+    joints:
+      - mani1_joint7
+  - name: fake_endeffector2_controller
+    joints:
+      - mani2_joint7
+initial:  # Define initial robot poses.
+  - group: manipulator1
+    pose: mani1_home
+  - group: manipulator2
+    pose: mani2_home

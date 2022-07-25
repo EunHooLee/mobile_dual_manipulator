@@ -1,0 +1,5 @@
+<launch>
+  <include file = "$(find my_dual_arm)/launch/dualarm_bringup_gazebo.launch"/>
+
+
+</launch>

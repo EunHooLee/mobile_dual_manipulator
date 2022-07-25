@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/leh/catkin_ws/src/mservo_manipulator_control-main/ethercat_test/src/servo_def.c
+servo_def.h
+/home/leh/catkin_ws/src/mservo_manipulator_control-main/ethercat_test/src/servo_def.h
+
+/home/leh/catkin_ws/src/mservo_manipulator_control-main/ethercat_test/src/servo_def.h
+stdint.h
+-
+

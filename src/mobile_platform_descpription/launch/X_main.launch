@@ -1,0 +1,9 @@
+<launch>
+
+  <include file="$(find mobile_platform_description)/launch/X_model.launch"/>
+
+  <include file="$(find dualarm_moveit)/launch/gazebo_states.launch"/>
+
+  <include file="$(find dualarm_moveit)/launch/ros_controllers.launch"/>
+
+</launch>

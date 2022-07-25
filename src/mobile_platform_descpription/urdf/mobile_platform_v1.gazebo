@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<robot name="mobile_platform_description_v1" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="PI" value="3.14159265359"/> 
+      <gazebo reference="base_link">
+        <material>Gazebo/DarkGrey</material>
+    </gazebo>
+  
+    <gazebo reference="vehicle_v2_base">
+    </gazebo>
+
+    <!-- front right wheel -->
+    <gazebo reference="fr_wheel_link">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+
+    <!-- front left wheel -->
+    <gazebo reference="fl_wheel_link">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+
+    <!-- back right wheel -->
+    <gazebo reference="br_wheel_link">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+
+    <!-- back left wheel -->
+    <gazebo reference="bl_wheel_link">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+
+    <!-- IMU sensor -->
+    <gazebo reference="imu_link">
+        <sensor type="imu" name="imu">
+        <always_on>true</always_on>
+        </sensor>
+        <material>Gazebo/FlatBlack</material>
+    </gazebo>
+
+    <gazebo>
+      <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>50.0</updateRate>
+        <bodyName>base_footprint</bodyName>
+        <topicName>pose</topicName>
+        <gaussianNoise>0.01</gaussianNoise>
+        <frameName>world</frameName>
+        <xyzOffsets>0 0 0</xyzOffsets>
+        <rpyOffsets>0 0 0</rpyOffsets>
+      </plugin>
+    </gazebo>
+
+    <gazebo>
+        <plugin name="imu_plugin" filename="libgazebo_ros_imu.so">
+            <alwaysOn>true</alwaysOn>
+            <bodyName>imu_link</bodyName>
+            <frameName>imu_link</frameName>
+            <topicName>imu</topicName>
+            <serviceName>imu_service</serviceName>
+            <gaussianNoise>0.0</gaussianNoise>
+            <updateRate>200</updateRate>
+            <imu>
+                <noise>
+                <type>gaussian</type>
+                <rate>
+                    <mean>0.0</mean>
+                    <stddev>2e-4</stddev>
+                    <bias_mean>0.0000075</bias_mean>
+                    <bias_stddev>0.0000008</bias_stddev>
+                </rate>
+                <accel>
+                    <mean>0.0</mean>
+                    <stddev>1.7e-2</stddev>
+                    <bias_mean>0.1</bias_mean>
+                    <bias_stddev>0.001</bias_stddev>
+                </accel>
+                </noise>
+            </imu>
+        </plugin>
+    </gazebo>  
+
+    <!-- Lidar sensor -->
+    <gazebo reference="velodyne">
+        <material>Gazebo/FlatBlack</material>
+        <sensor type="gpu_ray" name="lds_lfcd_sensor">
+        <pose>0 0 0 0 0 0</pose>
+        <visualize>false</visualize>
+        <update_rate>10</update_rate>
+        <ray>
+            <scan>
+            <horizontal>
+                <samples>440</samples>
+                <resolution>1</resolution>
+                <min_angle>0.0</min_angle>
+                <max_angle>6.28</max_angle>
+            </horizontal>
+            </scan>
+            <range>
+            <min>0.5</min>
+            <max>12</max>
+            <resolution>0.001</resolution>
+            </range>
+            <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.002</stddev>
+            </noise>
+        </ray>
+        <plugin name="gazebo_ros_lds_lfcd_controller" filename="libgazebo_ros_gpu_laser.so">
+            <topicName>scan</topicName>
+            <frameName>velodyne</frameName>
+        </plugin>
+        </sensor>
+    </gazebo>
+
+    <gazebo>
+        <plugin name="dummy_drive" filename="libgazebo_ros_planar_move.so">
+            <legacyMode>false</legacyMode>
+            <alwaysOn>true</alwaysOn>
+            <updateRate>100</updateRate>
+            <covariance_x>0.000100</covariance_x>
+            <covariance_y>0.000100</covariance_y>
+            <covariance_yaw>0.010000</covariance_yaw>
+            <broadcastTF>100</broadcastTF>
+            <torque>5</torque>
+            <commandTopic>vel</commandTopic>
+            <odometryTopic>odom</odometryTopic>
+            <odometryFrame>odom</odometryFrame>
+            <odometryRate>100.0</odometryRate>
+            <robotBaseFrame>base_footprint</robotBaseFrame>
+        </plugin>
+    </gazebo>
+
+</robot>

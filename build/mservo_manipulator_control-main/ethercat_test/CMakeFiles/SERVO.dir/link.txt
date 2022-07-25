@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libSERVO.so -o /home/leh/catkin_ws/devel/lib/libSERVO.so CMakeFiles/SERVO.dir/src/servo_def.c.o 

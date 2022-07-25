@@ -1,0 +1,4 @@
+<launch>
+  <node name="gripper_1" pkg="dxl_gripper" type="dxl_gripper_ctrl1.py" />
+	<node name="gripper_2" pkg="dxl_gripper" type="dxl_gripper_ctrl2.py" />
+</launch>

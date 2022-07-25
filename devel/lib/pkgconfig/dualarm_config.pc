@@ -1,0 +1,8 @@
+prefix=/home/leh/catkin_ws/devel
+
+Name: dualarm_config
+Description: Description of dualarm_config
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
