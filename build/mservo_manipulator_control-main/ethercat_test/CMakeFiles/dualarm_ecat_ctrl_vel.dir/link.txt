@@ -1,1 +1,0 @@
-/usr/bin/c++       -rdynamic CMakeFiles/dualarm_ecat_ctrl_vel.dir/src/dualarm_ecat_ctrl_vel.cpp.o  -o /home/leh/catkin_ws/devel/lib/ethercat_test/dualarm_ecat_ctrl_vel 

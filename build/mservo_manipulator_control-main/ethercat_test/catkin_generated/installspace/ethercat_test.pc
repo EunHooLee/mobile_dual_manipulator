@@ -1,8 +1,0 @@
-prefix=/home/leh/catkin_ws/install
-
-Name: ethercat_test
-Description: Description of ethercat_test
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: 

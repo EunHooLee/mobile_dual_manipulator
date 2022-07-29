@@ -1,9 +1,13 @@
 # Simulation settings for using moveit_sim_controllers
 moveit_sim_hw_interface:
   joint_model_group:
-    - manipulator1
-    - manipulator2
-  joint_model_group_pose: mani1_home
+    - mani1
+    - mani2
+    - body
+  joint_model_group_pose:
+    - mani1_home
+    - mani2_home
+    - body_home
 # Settings for ros_control_boilerplate control loop
 generic_hw_control_loop:
   loop_hz: 300
@@ -11,6 +15,7 @@ generic_hw_control_loop:
 # Settings for ros_control hardware interface
 hardware_interface:
   joints:
+    - dummy_joint
     - mani1_joint1
     - mani1_joint2
     - mani1_joint3
@@ -29,27 +34,27 @@ hardware_interface:
 # Publish all joint states
 # Creates the /joint_states topic necessary in ROS
 dualarm:
-#  gazebo_ros_control/pid_gains:
-#    mani1_joint1: {p: 1.0, i: 0.01, d: 100.0}
-#    mani1_joint2: {p: 1.0, i: 0.01, d: 100.0}
-#    mani1_joint3: {p: 1.0, i: 0.01, d: 100.0}
-#    mani1_joint4: {p: 1.0, i: 0.01, d: 100.0}
-#    mani1_joint5: {p: 1.0, i: 0.01, d: 100.0}
-#    mani1_joint6: {p: 1.0, i: 0.01, d: 100.0}
-#    mani1_joint7: {p: 1.0, i: 0.01, d: 100.0}
-#    mani2_joint1: {p: 1.0, i: 0.01, d: 100.0}
-#    mani2_joint2: {p: 1.0, i: 0.01, d: 100.0}
-#    mani2_joint3: {p: 1.0, i: 0.01, d: 100.0}
-#    mani2_joint4: {p: 1.0, i: 0.01, d: 100.0}
-#    mani2_joint5: {p: 1.0, i: 0.01, d: 100.0}
-#    mani2_joint6: {p: 1.0, i: 0.01, d: 100.0}
-#    mani2_joint7: {p: 1.0, i: 0.01, d: 100.0}
+  # gazebo_ros_control/pid_gains:
+  #   mani1_joint1: {p: 1.0, i: 0.01, d: 100.0}
+  #   mani1_joint2: {p: 1.0, i: 0.01, d: 100.0}
+  #   mani1_joint3: {p: 1.0, i: 0.01, d: 100.0}
+  #   mani1_joint4: {p: 1.0, i: 0.01, d: 100.0}
+  #   mani1_joint5: {p: 1.0, i: 0.01, d: 100.0}
+  #   mani1_joint6: {p: 1.0, i: 0.01, d: 100.0}
+  #   mani1_joint7: {p: 1.0, i: 0.01, d: 100.0}
+  #   mani2_joint1: {p: 1.0, i: 0.01, d: 100.0}
+  #   mani2_joint2: {p: 1.0, i: 0.01, d: 100.0}
+  #   mani2_joint3: {p: 1.0, i: 0.01, d: 100.0}
+  #   mani2_joint4: {p: 1.0, i: 0.01, d: 100.0}
+  #   mani2_joint5: {p: 1.0, i: 0.01, d: 100.0}
+  #   mani2_joint6: {p: 1.0, i: 0.01, d: 100.0}
+  #   mani2_joint7: {p: 1.0, i: 0.01, d: 100.0}
 
   joint_state_controller:
     type: joint_state_controller/JointStateController
     publish_rate: 100
 
-  manipulator1_controller:
+  mani1_controller:
     default: True
     type: "position_controllers/JointTrajectoryController"
     joints:
@@ -61,14 +66,14 @@ dualarm:
       - mani1_joint6
       - mani1_joint7
     constraints:
-       mani1_joint1: {goal: 0.05}
-       mani1_joint2: {goal: 0.05}
-       mani1_joint3: {goal: 0.05}
-       mani1_joint4: {goal: 0.05}
-       mani1_joint5: {goal: 0.05}
-       mani1_joint6: {goal: 0.05}
-       mani1_joint7: {goal: 0.05}
-       stopped_velocity_tolerance: 0
+      mani1_joint1: {goal: 0.05}
+      mani1_joint2: {goal: 0.05}
+      mani1_joint3: {goal: 0.05}
+      mani1_joint4: {goal: 0.05}
+      mani1_joint5: {goal: 0.05}
+      mani1_joint6: {goal: 0.05}
+      mani1_joint7: {goal: 0.05}
+      stopped_velocity_tolerance: 0
 
     pid_gains:
       mani1_joint1: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
@@ -79,7 +84,7 @@ dualarm:
       mani1_joint6: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
       mani1_joint7: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
 
-  manipulator2_controller:
+  mani2_controller:
     default: True
     type: "position_controllers/JointTrajectoryController"
     joints:
@@ -91,14 +96,14 @@ dualarm:
       - mani2_joint6
       - mani2_joint7
     constraints:
-       mani2_joint1: {goal: 0.01}
-       mani2_joint2: {goal: 0.01}
-       mani2_joint3: {goal: 0.01}
-       mani2_joint4: {goal: 0.01}
-       mani2_joint5: {goal: 0.01}
-       mani2_joint6: {goal: 0.01}
-       mani2_joint7: {goal: 0.01}
-       stopped_velocity_tolerance: 0
+      mani2_joint1: {goal: 0.01}
+      mani2_joint2: {goal: 0.01}
+      mani2_joint3: {goal: 0.01}
+      mani2_joint4: {goal: 0.01}
+      mani2_joint5: {goal: 0.01}
+      mani2_joint6: {goal: 0.01}
+      mani2_joint7: {goal: 0.01}
+      stopped_velocity_tolerance: 0
 
     pid_gains:
       mani2_joint1: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
@@ -108,40 +113,120 @@ dualarm:
       mani2_joint5: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
       mani2_joint6: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
       mani2_joint7: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
-#
-#  manipulator1_torque:
-#    type: effort_controllers/JointEffortController
-#    joints:
-#      - mani1_joint1
-#      - mani1_joint2
-#      - mani1_joint3
-#      - mani1_joint4
-#      - mani1_joint5
-#      - mani1_joint6
-#      - mani1_joint7
-#    pid_gains:
-#      mani1_joint1: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
-#      mani1_joint2: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
-#      mani1_joint3: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
-#      mani1_joint4: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
-#      mani1_joint5: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
-#      mani1_joint6: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
-#      mani1_joint7: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
-#  manipulator2_torque:
-#    type: effort_controllers/JointEffortController
-#    joints:
-#    - mani2_joint1
-#    - mani2_joint2
-#    - mani2_joint3
-#    - mani2_joint4
-#    - mani2_joint5
-#    - mani2_joint6
-#    - mani2_joint7
-#    pid_gains:
-#      mani2_joint1: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
-#      mani2_joint2: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
-#      mani2_joint3: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
-#      mani2_joint4: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
-#      mani2_joint5: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
-#      mani2_joint6: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
-#      mani2_joint7: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
+
+  body_controller:
+    default: True
+    type: "position_controllers/JointTrajectoryController"
+    joints:
+      - dummy_joint
+    constraints:
+      dummy_joint: {goal: 0.01}
+      stopped_velocity_tolerance: 0
+
+    pid_gains:
+      dummy_joint: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
+
+
+
+# mani1_controller:
+#   type: position_controllers/JointTrajectoryController
+#   joints:
+#     - mani1_joint1
+#     - mani1_joint2
+#     - mani1_joint3
+#     - mani1_joint4
+#     - mani1_joint5
+#     - mani1_joint6
+#     - mani1_joint7
+#   gains:
+#     mani1_joint1:
+#       p: 100
+#       d: 1
+#       i: 1
+#       i_clamp: 1
+#     mani1_joint2:
+#       p: 100
+#       d: 1
+#       i: 1
+#       i_clamp: 1
+#     mani1_joint3:
+#       p: 100
+#       d: 1
+#       i: 1
+#       i_clamp: 1
+#     mani1_joint4:
+#       p: 100
+#       d: 1
+#       i: 1
+#       i_clamp: 1
+#     mani1_joint5:
+#       p: 100
+#       d: 1
+#       i: 1
+#       i_clamp: 1
+#     mani1_joint6:
+#       p: 100
+#       d: 1
+#       i: 1
+#       i_clamp: 1
+#     mani1_joint7:
+#       p: 100
+#       d: 1
+#       i: 1
+#       i_clamp: 1
+# mani2_controller:
+#   type: position_controllers/JointTrajectoryController
+#   joints:
+#     - mani2_joint1
+#     - mani2_joint2
+#     - mani2_joint3
+#     - mani2_joint4
+#     - mani2_joint5
+#     - mani2_joint6
+#     - mani2_joint7
+#   gains:
+#     mani2_joint1:
+#       p: 100
+#       d: 1
+#       i: 1
+#       i_clamp: 1
+#     mani2_joint2:
+#       p: 100
+#       d: 1
+#       i: 1
+#       i_clamp: 1
+#     mani2_joint3:
+#       p: 100
+#       d: 1
+#       i: 1
+#       i_clamp: 1
+#     mani2_joint4:
+#       p: 100
+#       d: 1
+#       i: 1
+#       i_clamp: 1
+#     mani2_joint5:
+#       p: 100
+#       d: 1
+#       i: 1
+#       i_clamp: 1
+#     mani2_joint6:
+#       p: 100
+#       d: 1
+#       i: 1
+#       i_clamp: 1
+#     mani2_joint7:
+#       p: 100
+#       d: 1
+#       i: 1
+#       i_clamp: 1
+# body_controller:
+#   type: position_controllers/JointTrajectoryController
+#   joints:
+#     - dummy_joint
+#   gains:
+#     dummy_joint:
+#       p: 100
+#       d: 1
+#       i: 1
+#       i_clamp: 1

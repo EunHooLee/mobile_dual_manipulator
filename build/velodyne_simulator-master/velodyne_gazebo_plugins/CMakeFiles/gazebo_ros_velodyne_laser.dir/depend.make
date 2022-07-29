@@ -669,6 +669,7 @@ velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/msgs5/ignition/msgs/entity.pb.h
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/msgs5/ignition/msgs/entity_factory.pb.h
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/msgs5/ignition/msgs/entity_factory_v.pb.h
+velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/msgs5/ignition/msgs/entity_wrench.pb.h
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/msgs5/ignition/msgs/float.pb.h
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/msgs5/ignition/msgs/float_v.pb.h
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/msgs5/ignition/msgs/fluid.pb.h

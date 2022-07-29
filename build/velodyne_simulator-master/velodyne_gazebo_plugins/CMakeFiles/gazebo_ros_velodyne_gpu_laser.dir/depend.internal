@@ -670,6 +670,7 @@ velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne
  /usr/include/ignition/msgs5/ignition/msgs/entity.pb.h
  /usr/include/ignition/msgs5/ignition/msgs/entity_factory.pb.h
  /usr/include/ignition/msgs5/ignition/msgs/entity_factory_v.pb.h
+ /usr/include/ignition/msgs5/ignition/msgs/entity_wrench.pb.h
  /usr/include/ignition/msgs5/ignition/msgs/float.pb.h
  /usr/include/ignition/msgs5/ignition/msgs/float_v.pb.h
  /usr/include/ignition/msgs5/ignition/msgs/fluid.pb.h

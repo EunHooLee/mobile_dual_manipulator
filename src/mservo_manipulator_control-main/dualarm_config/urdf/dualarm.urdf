@@ -6,7 +6,7 @@
 
   <!-- make dummy joint -->
 
-<joint name="dummy_joint" type="fixed">
+  <joint name="dummy_joint" type="planar">
     <origin xyz="0 0 0" rpy="0 0 0" />
     <child link="base_link"/>
     <parent link="dummy_link"/>
@@ -16,11 +16,25 @@
 <!-- make dummy link -->
 
   <link name="dummy_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="10000" />
+      <inertia
+        ixx="16.41666666666667"
+        ixy="9.71445146547012E-16"
+        ixz="-1.38777878078145E-17"
+        iyy="16.41666666666666"
+        iyz="9.853854297E-18"
+        izz="16" />
+    </inertial>
   </link>
 
-  <gazebo reference="dummy_link">
+  <!-- <gazebo reference="dummy_link">
     <material>Gazebo/White</material>
-  </gazebo>
+  </gazebo> -->
 
 
   <link
@@ -71,7 +85,7 @@
 
 <!-- lidar & camera, table -->
 
-  <link name="lidar1">
+  <!-- <link name="lidar1">
 
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -165,7 +179,7 @@
       link="table" />
     <axis
       xyz="0 0 0" />
-  </joint>
+  </joint> -->
 
 
 
@@ -1287,6 +1301,16 @@
 
 
 <!-- Transmissions for ROS Control -->
+  <transmission name="dummy_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="dummy_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="center_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
 
   <transmission name="left_tran1">
     <type>transmission_interface/SimpleTransmission</type>

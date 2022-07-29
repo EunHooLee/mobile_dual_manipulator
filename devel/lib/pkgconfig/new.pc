@@ -1,0 +1,8 @@
+prefix=/home/leh/catkin_ws/devel
+
+Name: new
+Description: Description of new
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

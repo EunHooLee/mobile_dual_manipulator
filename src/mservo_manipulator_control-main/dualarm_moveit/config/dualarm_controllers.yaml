@@ -1,6 +1,6 @@
 # for MoveIt controller list
 controller_list:
-  - name: dualarm/manipulator1_controller
+  - name: dualarm/mani1_controller
     action_ns: follow_joint_trajectory
     default: True
     type: FollowJointTrajectory
@@ -22,7 +22,7 @@ controller_list:
       mani1_joint6: {p: 100.0, i: 0.0, d: 0.1, i_clamp: 0.0}
       mani1_joint7: {p: 100.0, i: 0.0, d: 0.1, i_clamp: 0.0}
 
-  - name: dualarm/manipulator2_controller
+  - name: dualarm/mani2_controller
     action_ns: follow_joint_trajectory
     default: True
     type: FollowJointTrajectory
@@ -43,6 +43,17 @@ controller_list:
       mani2_joint5: {p: 100.0, i: 0.0, d: 0.1, i_clamp: 0.0}
       mani2_joint6: {p: 100.0, i: 0.0, d: 0.1, i_clamp: 0.0}
       mani2_joint7: {p: 100.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+
+  - name: dualarm/body_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - dummy_joint
+
+    pid_gains:
+      dummy_joint: {p: 100.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+
 #
 #  - name: manipulator1_torque
 #    action_ns: dualarm_config

@@ -6,10 +6,10 @@
   <arg name="robot_description" default="robot_description"/>
 
   <!-- Load universal robot description format (URDF) -->
-  <!-- <param if="$(arg load_robot_description)" name="$(arg robot_description)" textfile="$(find dualarm_config)/urdf/dualarm.urdf"/> -->
+  <param if="$(arg load_robot_description)" name="$(arg robot_description)" textfile="$(find dualarm_config)/urdf/dualarm.urdf"/>
 
   <!--DUAL ARM WITH MOBILE PLATFORM VER-->
-  <param if="$(arg load_robot_description)" name="$(arg robot_description)" textfile="$(find mobile_platform_description)/urdf/mobile_platform_description_v1.xacro"/>
+  <!-- <param if="$(arg load_robot_description)" name="$(arg robot_description)" textfile="$(find mobile_platform_description)/urdf/mobile_platform_description_v1.xacro"/> -->
 
   <!-- The semantic description that corresponds to the URDF -->
   <param name="$(arg robot_description)_semantic" textfile="$(find dualarm_moveit)/config/dualarm.srdf" />
