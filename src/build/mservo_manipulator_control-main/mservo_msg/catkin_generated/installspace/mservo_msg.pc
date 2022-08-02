@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: mservo_msg
+Description: Description of mservo_msg
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

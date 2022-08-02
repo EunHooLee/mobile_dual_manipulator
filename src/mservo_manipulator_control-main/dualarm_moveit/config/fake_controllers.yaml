@@ -23,6 +23,8 @@ controller_list:
     type: $(arg fake_execution_type)
     joints:
       - dummy_joint
+      - dummy_joint_1
+      - dummy_joint_2
 initial:  # Define initial robot poses per group
   - group: mani1
     pose: mani1_home

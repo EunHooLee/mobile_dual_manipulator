@@ -65,8 +65,6 @@ Visualization Manager:
       MoveIt_Planning_Time: 5
       MoveIt_Use_Cartesian_Path: false
       MoveIt_Use_Constraint_Aware_IK: false
-      MoveIt_Warehouse_Host: 127.0.0.1
-      MoveIt_Warehouse_Port: 33829
       MoveIt_Workspace:
         Center:
           X: 0
@@ -92,6 +90,14 @@ Visualization Manager:
             Show Trail: false
             Value: true
           dummy_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          dummy_link_1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          dummy_link_2:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -145,6 +151,11 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          mani2_link1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           mani2_link2:
             Alpha: 1
             Show Axes: false
@@ -180,6 +191,10 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          world:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
         Loop Animation: false
         Robot Alpha: 0.5
         Robot Color: 150; 50; 150
@@ -189,6 +204,7 @@ Visualization Manager:
         State Display Time: 0.05 s
         Trail Step Size: 1
         Trajectory Topic: /move_group/display_planned_path
+        Use Sim Time: false
       Planning Metrics:
         Payload: 1
         Show Joint Torques: false
@@ -234,6 +250,14 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
+          dummy_link_1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          dummy_link_2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           mani1_base:
             Alpha: 1
             Show Axes: false
@@ -284,6 +308,11 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          mani2_link1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           mani2_link2:
             Alpha: 1
             Show Axes: false
@@ -319,6 +348,10 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          world:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
         Robot Alpha: 1
         Show Robot Collision: false
         Show Robot Visual: true
@@ -328,7 +361,7 @@ Visualization Manager:
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: base_link
+    Fixed Frame: world
     Frame Rate: 30
   Name: root
   Tools:
@@ -352,12 +385,13 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.1580493450164795
+      Distance: 5.984440803527832
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
+      Field of View: 0.7853981852531433
       Focal Point:
         X: 0.04652298614382744
         Y: 0.09555718302726746
@@ -367,10 +401,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.2597957849502563
+      Pitch: 0.41479620337486267
       Target Frame: <Fixed Frame>
-      Value: Orbit (rviz)
-      Yaw: 1.7403998374938965
+      Yaw: 2.800400972366333
     Saved: ~
 Window Geometry:
   Displays:
@@ -392,5 +425,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1292
-  X: 620
-  Y: 60
+  X: 564
+  Y: 27

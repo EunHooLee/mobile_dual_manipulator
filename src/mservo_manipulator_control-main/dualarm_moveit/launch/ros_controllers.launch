@@ -2,10 +2,10 @@
 <launch>
 
   <!-- Load joint controller configurations from YAML file to parameter server -->
-  <rosparam file="$(find dualarm_moveit)/config/ros_controllers.yaml" command="load"/>
+  <rosparam file="$(find dualarm_moveit)/config/ros_controllers.yaml" command="load"/>`
 
   <!-- Load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" ns="/dualarm" args="mani1_controller mani2_controller body_contoller "/>
+    output="screen" ns="/dualarm" args="body_controller mani1_controller mani2_controller"/>
 
 </launch>

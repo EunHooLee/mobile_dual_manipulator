@@ -29,3 +29,5 @@ controller_list:
     default: True
     joints:
       - dummy_joint
+      - dummy_joint_1
+      - dummy_joint_2

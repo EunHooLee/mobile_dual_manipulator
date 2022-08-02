@@ -6,14 +6,51 @@
 
   <!-- make dummy joint -->
 
-  <joint name="dummy_joint" type="planar">
+  <joint name="dummy_joint" type="prismatic">
     <origin xyz="0 0 0" rpy="0 0 0" />
-    <child link="base_link"/>
+    <child link="dummy_link_1"/>
     <parent link="dummy_link"/>
+    <limit
+      lower="-12.74"
+      upper="12.74"
+      effort="100"
+      velocity="0.8" />
   </joint>
 
+  <joint name="dummy_joint_1" type="prismatic">
+    <origin xyz="0 0 0" rpy="0 0 1.5708" />
+    <child link="dummy_link_2"/>
+    <parent link="dummy_link_1"/>
+    <limit
+      lower="-12.74"
+      upper="12.74"
+      effort="100"
+      velocity="0.8" />
+  </joint>
+
+  <joint name="dummy_joint_2" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 0 1" rpy="0 0 0"/>
+    <child link="base_link"/>
+    <parent link="dummy_link_2"/>
+    <limit
+      lower="-2.74"
+      upper="2.74"
+      effort="100"
+      velocity="0.8" />
+  </joint>
+
+  <joint name="dummy_joint_x" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <child link="dummy_link"/>
+    <parent link="world"/>
+
+  </joint>
+
+  
 
 <!-- make dummy link -->
+  <link name= "world"/>
 
   <link name="dummy_link">
     <inertial>
@@ -21,9 +58,43 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <mass
-        value="10000" />
+        value="1" />
       <inertia
-        ixx="16.41666666666667"
+        ixx="6.41666666666667"
+        ixy="9.71445146547012E-16"
+        ixz="-1.38777878078145E-17"
+        iyy="16.41666666666666"
+        iyz="9.853854297E-18"
+        izz="16" />
+    </inertial>
+  </link>
+
+  <link name="dummy_link_1">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="6.41666666666667"
+        ixy="9.71445146547012E-16"
+        ixz="-1.38777878078145E-17"
+        iyy="16.41666666666666"
+        iyz="9.853854297E-18"
+        izz="16" />
+    </inertial>
+  </link>
+
+  <link name="dummy_link_2">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="6.41666666666667"
         ixy="9.71445146547012E-16"
         ixz="-1.38777878078145E-17"
         iyy="16.41666666666666"
@@ -1307,6 +1378,28 @@
       <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="center_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="dummy_tran_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="dummy_joint_1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="center_motor_1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="dummy_tran_2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="dummy_joint_2">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="center_motor_2">
       <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>

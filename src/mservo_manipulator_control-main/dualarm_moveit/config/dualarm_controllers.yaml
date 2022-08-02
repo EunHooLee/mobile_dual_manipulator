@@ -50,9 +50,13 @@ controller_list:
     type: FollowJointTrajectory
     joints:
       - dummy_joint
+      - dummy_joint_1
+      - dummy_joint_2
 
     pid_gains:
-      dummy_joint: {p: 100.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+      dummy_joint  : {p: 100.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+      dummy_joint_1: {p: 100.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+      dummy_joint_2: {p: 100.0, i: 0.0, d: 0.1, i_clamp: 0.0}
 
 #
 #  - name: manipulator1_torque

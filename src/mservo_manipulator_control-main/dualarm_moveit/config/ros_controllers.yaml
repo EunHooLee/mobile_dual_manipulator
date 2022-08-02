@@ -16,6 +16,8 @@ generic_hw_control_loop:
 hardware_interface:
   joints:
     - dummy_joint
+    - dummy_joint_1
+    - dummy_joint_2
     - mani1_joint1
     - mani1_joint2
     - mani1_joint3
@@ -56,7 +58,7 @@ dualarm:
 
   mani1_controller:
     default: True
-    type: "position_controllers/JointTrajectoryController"
+    type: position_controllers/JointTrajectoryController
     joints:
       - mani1_joint1
       - mani1_joint2
@@ -86,7 +88,7 @@ dualarm:
 
   mani2_controller:
     default: True
-    type: "position_controllers/JointTrajectoryController"
+    type: position_controllers/JointTrajectoryController
     joints:
       - mani2_joint1
       - mani2_joint2
@@ -116,16 +118,21 @@ dualarm:
 
   body_controller:
     default: True
-    type: "position_controllers/JointTrajectoryController"
+    type: position_controllers/JointTrajectoryController
     joints:
       - dummy_joint
+      - dummy_joint_1
+      - dummy_joint_2
     constraints:
       dummy_joint: {goal: 0.01}
+      dummy_joint_1: {goal: 0.01}
+      dummy_joint_2: {goal: 0.01}
       stopped_velocity_tolerance: 0
 
     pid_gains:
       dummy_joint: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
-
+      dummy_joint_1: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
+      dummy_joint_2: {p: 100.0, i: 1.0, d: 1.0, i_clamp: 1.0}
 
 
 # mani1_controller:

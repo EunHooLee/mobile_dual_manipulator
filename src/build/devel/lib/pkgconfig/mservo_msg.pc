@@ -1,0 +1,8 @@
+prefix=/home/leh/catkin_ws/src/build/devel
+
+Name: mservo_msg
+Description: Description of mservo_msg
+Version: 0.0.0
+Cflags: -I/home/leh/catkin_ws/src/build/devel/include
+Libs: -L${prefix}/lib 
+Requires: 
