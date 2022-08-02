@@ -18,8 +18,8 @@
   </joint>
 
   <joint name="dummy_joint_1" type="prismatic">
-    <origin xyz="0 0 0" rpy="0 0 1.5708" />
     <child link="dummy_link_2"/>
+    <origin xyz="0 0 0" rpy="0 0 1.5708" />
     <parent link="dummy_link_1"/>
     <limit
       lower="-12.74"
