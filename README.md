@@ -15,5 +15,11 @@ If rviz is on, make sure that fixed frame is world, and if or not, change it to 
 
 For now, the robot is capable of translational motion on the x and y axis and rotational motion on the z-axis in terms of the **world frame**.
 
+### Problems
+
+
+
+
+
 The joint-link structure is as follows.
 **world - virtual_joint (fixed) - world (link) - dummy_joint_x (fixed) - dummy_link - dummy_joint (prismatic x) - dummy_link_1 - dummy_joint_1 (prismatic y) - dummy_link_2 - dummy_joint_2 (revolute z) - base_link**
