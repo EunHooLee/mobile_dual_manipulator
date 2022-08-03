@@ -242,10 +242,10 @@ gazebo_ros_velodyne_gpu_laser_EXTERNAL_OBJECTS =
 /home/leh/catkin_ws/devel/lib/libgazebo_ros_velodyne_gpu_laser.so: /opt/ros/noetic/lib/liboctomap.so.1.9.8
 /home/leh/catkin_ws/devel/lib/libgazebo_ros_velodyne_gpu_laser.so: /opt/ros/noetic/lib/liboctomath.so.1.9.8
 /home/leh/catkin_ws/devel/lib/libgazebo_ros_velodyne_gpu_laser.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.71.0
-/home/leh/catkin_ws/devel/lib/libgazebo_ros_velodyne_gpu_laser.so: /usr/lib/x86_64-linux-gnu/libignition-transport8.so.8.2.1
+/home/leh/catkin_ws/devel/lib/libgazebo_ros_velodyne_gpu_laser.so: /usr/lib/x86_64-linux-gnu/libignition-transport8.so.8.3.0
 /home/leh/catkin_ws/devel/lib/libgazebo_ros_velodyne_gpu_laser.so: /usr/lib/x86_64-linux-gnu/libignition-fuel_tools4.so.4.5.0
 /home/leh/catkin_ws/devel/lib/libgazebo_ros_velodyne_gpu_laser.so: /usr/lib/x86_64-linux-gnu/libignition-msgs5.so.5.10.0
-/home/leh/catkin_ws/devel/lib/libgazebo_ros_velodyne_gpu_laser.so: /usr/lib/x86_64-linux-gnu/libignition-math6.so.6.11.0
+/home/leh/catkin_ws/devel/lib/libgazebo_ros_velodyne_gpu_laser.so: /usr/lib/x86_64-linux-gnu/libignition-math6.so.6.12.0
 /home/leh/catkin_ws/devel/lib/libgazebo_ros_velodyne_gpu_laser.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 /home/leh/catkin_ws/devel/lib/libgazebo_ros_velodyne_gpu_laser.so: /usr/lib/x86_64-linux-gnu/libignition-common3.so.3.14.1
 /home/leh/catkin_ws/devel/lib/libgazebo_ros_velodyne_gpu_laser.so: /usr/lib/x86_64-linux-gnu/libuuid.so

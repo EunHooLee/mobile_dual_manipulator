@@ -4,6 +4,9 @@ controller_list:
     type: FollowJointTrajectory
     default: True
     joints:
+      - dummy_joint_l1
+      - dummy_joint_l2
+      - dummy_joint_l3
       - mani1_joint1
       - mani1_joint2
       - mani1_joint3
@@ -23,11 +26,3 @@ controller_list:
       - mani2_joint5
       - mani2_joint6
       - mani2_joint7
-  - name: body_controller
-    action_ns: follow_joint_trajectory
-    type: FollowJointTrajectory
-    default: True
-    joints:
-      - dummy_joint
-      - dummy_joint_1
-      - dummy_joint_2

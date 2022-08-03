@@ -84,11 +84,11 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          dummy_link_1:
+          dummy_link_l1:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          dummy_link_2:
+          dummy_link_l2:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -231,11 +231,11 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          dummy_link_1:
+          dummy_link_l1:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          dummy_link_2:
+          dummy_link_l2:
             Alpha: 1
             Show Axes: false
             Show Trail: false

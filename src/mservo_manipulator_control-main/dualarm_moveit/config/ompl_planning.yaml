@@ -153,33 +153,9 @@ mani1:
     - LazyPRMstar
     - SPARS
     - SPARStwo
+  projection_evaluator: joints(dummy_joint_l1,dummy_joint_l2)
+  longest_valid_segment_fraction: 0.005
 mani2:
-  planner_configs:
-    - AnytimePathShortening
-    - SBL
-    - EST
-    - LBKPIECE
-    - BKPIECE
-    - KPIECE
-    - RRT
-    - RRTConnect
-    - RRTstar
-    - TRRT
-    - PRM
-    - PRMstar
-    - FMT
-    - BFMT
-    - PDST
-    - STRIDE
-    - BiTRRT
-    - LBTRRT
-    - BiEST
-    - ProjEST
-    - LazyPRM
-    - LazyPRMstar
-    - SPARS
-    - SPARStwo
-body:
   planner_configs:
     - AnytimePathShortening
     - SBL

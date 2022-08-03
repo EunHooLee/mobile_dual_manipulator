@@ -2,6 +2,9 @@ controller_list:
   - name: fake_mani1_controller
     type: $(arg fake_execution_type)
     joints:
+      - dummy_joint_l1
+      - dummy_joint_l2
+      - dummy_joint_l3
       - mani1_joint1
       - mani1_joint2
       - mani1_joint3
@@ -19,16 +22,8 @@ controller_list:
       - mani2_joint5
       - mani2_joint6
       - mani2_joint7
-  - name: fake_body_controller
-    type: $(arg fake_execution_type)
-    joints:
-      - dummy_joint
-      - dummy_joint_1
-      - dummy_joint_2
 initial:  # Define initial robot poses per group
   - group: mani1
-    pose: mani1_home
+    pose: mani_home
   - group: mani2
     pose: mani2_home
-  - group: body
-    pose: body_home

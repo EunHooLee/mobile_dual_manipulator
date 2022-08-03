@@ -562,6 +562,7 @@ velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/common3/ignition/common/profiler/Export.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/common3/ignition/common/profiler/detail/Export.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math.hh
+velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/AdditivelySeparableScalarField3.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/Angle.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/AxisAlignedBox.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/Box.hh
@@ -576,6 +577,7 @@ velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/GaussMarkovProcess.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/Helpers.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/Inertial.hh
+velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/Interval.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/Kmeans.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/Line2.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/Line3.hh
@@ -584,13 +586,17 @@ velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/MaterialType.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/Matrix3.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/Matrix4.hh
+velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/Matrix6.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/MovingWindowFilter.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/OrientedBox.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/PID.hh
+velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/PiecewiseScalarField3.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/Plane.hh
+velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/Polynomial3.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/Pose3.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/Quaternion.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/Rand.hh
+velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/Region3.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/RollingMean.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/RotationSpline.hh
 velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o: /usr/include/ignition/math6/ignition/math/SemanticVersion.hh

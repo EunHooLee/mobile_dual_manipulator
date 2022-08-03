@@ -1,0 +1,71 @@
+digraph G {
+node [shape=box];
+"world" [label="world"];
+"dummy_link" [label="dummy_link"];
+"dummy_link_l1" [label="dummy_link_l1"];
+"dummy_link_l2" [label="dummy_link_l2"];
+"base_link" [label="base_link"];
+"mani1_base" [label="mani1_base"];
+"mani1_link1" [label="mani1_link1"];
+"mani1_link2" [label="mani1_link2"];
+"mani1_link3" [label="mani1_link3"];
+"mani1_link4" [label="mani1_link4"];
+"mani1_link5" [label="mani1_link5"];
+"mani1_link6" [label="mani1_link6"];
+"mani1_link7" [label="mani1_link7"];
+"mani1_eff" [label="mani1_eff"];
+"mani2_base" [label="mani2_base"];
+"mani2_link1" [label="mani2_link1"];
+"mani2_link2" [label="mani2_link2"];
+"mani2_link3" [label="mani2_link3"];
+"mani2_link4" [label="mani2_link4"];
+"mani2_link5" [label="mani2_link5"];
+"mani2_link6" [label="mani2_link6"];
+"mani2_link7" [label="mani2_link7"];
+"mani2_link8" [label="mani2_link8"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"world" -> "world_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"world_joint" -> "dummy_link"
+"dummy_link" -> "dummy_joint_l1" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"dummy_joint_l1" -> "dummy_link_l1"
+"dummy_link_l1" -> "dummy_joint_l2" [label="xyz: 0 0 0 \nrpy: 0 -0 1.5708"]
+"dummy_joint_l2" -> "dummy_link_l2"
+"dummy_link_l2" -> "dummy_joint_l3" [label="xyz: 0 0 0 \nrpy: 0 -0 1.5708"]
+"dummy_joint_l3" -> "base_link"
+"base_link" -> "base_joint_left" [label="xyz: 0.23 0 0.376 \nrpy: 0 -0 0"]
+"base_joint_left" -> "mani1_base"
+"mani1_base" -> "mani1_fixed" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"mani1_fixed" -> "mani1_link1"
+"mani1_link1" -> "mani1_joint1" [label="xyz: 0 0 0.022 \nrpy: 0 -0 0"]
+"mani1_joint1" -> "mani1_link2"
+"mani1_link2" -> "mani1_joint2" [label="xyz: 0 0 0.133 \nrpy: -1.5708 1.15556e-33 -4.3239e-18"]
+"mani1_joint2" -> "mani1_link3"
+"mani1_link3" -> "mani1_joint3" [label="xyz: 0 -0.2 0 \nrpy: 1.5708 -4.3239e-18 0"]
+"mani1_joint3" -> "mani1_link4"
+"mani1_link4" -> "mani1_joint4" [label="xyz: 0 0 0.13 \nrpy: -1.5708 6.16298e-33 -6.2595e-17"]
+"mani1_joint4" -> "mani1_link5"
+"mani1_link5" -> "mani1_joint5" [label="xyz: 0 -0.189 0 \nrpy: 1.5708 -6.2595e-17 6.16298e-33"]
+"mani1_joint5" -> "mani1_link6"
+"mani1_link6" -> "mani1_joint6" [label="xyz: 0 0 0.125 \nrpy: -1.5708 -2.73691e-48 2.6193e-32"]
+"mani1_joint6" -> "mani1_link7"
+"mani1_link7" -> "mani1_joint7" [label="xyz: 0 -0.175 0 \nrpy: 1.5708 -0 0"]
+"mani1_joint7" -> "mani1_eff"
+"base_link" -> "base_joint_right" [label="xyz: -0.23 0 0.364 \nrpy: 0 -0 0"]
+"base_joint_right" -> "mani2_base"
+"mani2_base" -> "mani2_fixed" [label="xyz: 0 0 0.012 \nrpy: 0 -0 1.5708"]
+"mani2_fixed" -> "mani2_link1"
+"mani2_link1" -> "mani2_joint1" [label="xyz: 0 0 0.125 \nrpy: 0 -0 1.5708"]
+"mani2_joint1" -> "mani2_link2"
+"mani2_link2" -> "mani2_joint2" [label="xyz: 0 -0.069 0.0675 \nrpy: -1.5708 0 0"]
+"mani2_joint2" -> "mani2_link3"
+"mani2_link3" -> "mani2_joint3" [label="xyz: 0 -0.2197 0.069 \nrpy: 1.5708 -0 0"]
+"mani2_joint3" -> "mani2_link4"
+"mani2_link4" -> "mani2_joint4" [label="xyz: 0 -0.061 0.0753 \nrpy: -1.5708 0 0"]
+"mani2_joint4" -> "mani2_link5"
+"mani2_link5" -> "mani2_joint5" [label="xyz: 0 -0.2 0.061 \nrpy: -1.5708 4.23516e-22 -3.14159"]
+"mani2_joint5" -> "mani2_link6"
+"mani2_link6" -> "mani2_joint6" [label="xyz: 0 0.032 0.25 \nrpy: -1.5708 0 0"]
+"mani2_joint6" -> "mani2_link7"
+"mani2_link7" -> "mani2_joint7" [label="xyz: 0 -0.0405 -0.032 \nrpy: 1.5708 -0 0"]
+"mani2_joint7" -> "mani2_link8"
+}

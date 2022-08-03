@@ -6,9 +6,18 @@
 
   <!-- make dummy joint -->
 
-  <joint name="dummy_joint" type="prismatic">
+
+  <joint name="world_joint" type="fixed">
     <origin xyz="0 0 0" rpy="0 0 0" />
-    <child link="dummy_link_1"/>
+    <child link="dummy_link"/>
+    <parent link="world"/>
+  </joint>
+
+
+
+  <joint name="dummy_joint_l1" type="prismatic">
+    <origin xyz="0 0 0" rpy="0 0 1.5708" />
+    <child link="dummy_link_l1"/>
     <parent link="dummy_link"/>
     <limit
       lower="-12.74"
@@ -17,10 +26,10 @@
       velocity="0.8" />
   </joint>
 
-  <joint name="dummy_joint_1" type="prismatic">
-    <child link="dummy_link_2"/>
+  <joint name="dummy_joint_l2" type="prismatic">
     <origin xyz="0 0 0" rpy="0 0 1.5708" />
-    <parent link="dummy_link_1"/>
+    <child link="dummy_link_l2"/>
+    <parent link="dummy_link_l1"/>
     <limit
       lower="-12.74"
       upper="12.74"
@@ -28,29 +37,60 @@
       velocity="0.8" />
   </joint>
 
-  <joint name="dummy_joint_2" type="revolute">
+  <joint name="dummy_joint_l3" type="revolute">
     <origin xyz="0 0 0" rpy="0 0 0" />
     <axis xyz="0 0 1" rpy="0 0 0"/>
     <child link="base_link"/>
-    <parent link="dummy_link_2"/>
+    <parent link="dummy_link_l2"/>
     <limit
-      lower="-2.74"
-      upper="2.74"
+      lower="-12.74"
+      upper="12.74"
       effort="100"
       velocity="0.8" />
   </joint>
 
-  <joint name="dummy_joint_x" type="fixed">
-    <origin xyz="0 0 0" rpy="0 0 0" />
-    <child link="dummy_link"/>
-    <parent link="world"/>
 
+
+
+  <!-- <joint name="dummy_joint_r1" type="prismatic">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <child link="dummy_link_r1"/>
+    <parent link="dummy_link"/>
+    <limit
+      lower="-12.74"
+      upper="12.74"
+      effort="100"
+      velocity="0.8" />
   </joint>
 
-  
+  <joint name="dummy_joint_r2" type="prismatic">
+    <origin xyz="0 0 0" rpy="0 0 1.5708" />
+    <child link="dummy_link_r2"/>
+    <parent link="dummy_link_r1"/>
+    <limit
+      lower="-12.74"
+      upper="12.74"
+      effort="100"
+      velocity="0.8" />
+  </joint>
+
+  <joint name="dummy_joint_r3" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 1.5708" />
+    <child link="base_link"/>
+    <parent link="dummy_link_r2"/>
+    <limit
+      lower="-12.74"
+      upper="12.74"
+      effort="100"
+      velocity="0.8" />
+  </joint> -->
+
+
 
 <!-- make dummy link -->
-  <link name= "world"/>
+
+  <link name="world">
+  </link>
 
   <link name="dummy_link">
     <inertial>
@@ -69,7 +109,43 @@
     </inertial>
   </link>
 
-  <link name="dummy_link_1">
+  <link name="dummy_link_l1">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="10" />
+      <inertia
+        ixx="6.41666666666667"
+        ixy="9.71445146547012E-16"
+        ixz="-1.38777878078145E-17"
+        iyy="16.41666666666666"
+        iyz="9.853854297E-18"
+        izz="16" />
+    </inertial>
+  </link>
+
+  <link name="dummy_link_l2">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="10" />
+      <inertia
+        ixx="6.41666666666667"
+        ixy="9.71445146547012E-16"
+        ixz="-1.38777878078145E-17"
+        iyy="16.41666666666666"
+        iyz="9.853854297E-18"
+        izz="16" />
+    </inertial>
+  </link>
+
+
+<!-- 
+  <link name="dummy_link_r1">
     <inertial>
       <origin
         xyz="0 0 0"
@@ -86,7 +162,7 @@
     </inertial>
   </link>
 
-  <link name="dummy_link_2">
+  <link name="dummy_link_r2">
     <inertial>
       <origin
         xyz="0 0 0"
@@ -101,12 +177,14 @@
         iyz="9.853854297E-18"
         izz="16" />
     </inertial>
-  </link>
+  </link> -->
 
-  <!-- <gazebo reference="dummy_link">
+
+
+
+  <gazebo reference="dummy_link">
     <material>Gazebo/White</material>
-  </gazebo> -->
-
+  </gazebo>
 
   <link
     name="base_link">
@@ -1372,34 +1450,34 @@
 
 
 <!-- Transmissions for ROS Control -->
-  <transmission name="dummy_tran">
+  <transmission name="dummy_tran_l1">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="dummy_joint">
+    <joint name="dummy_joint_l1">
       <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
-    <actuator name="center_motor">
+    <actuator name="dummy_motor_l1">
       <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
 
-  <transmission name="dummy_tran_1">
+  <transmission name="dummy_tran_l2">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="dummy_joint_1">
+    <joint name="dummy_joint_l2">
       <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
-    <actuator name="center_motor_1">
+    <actuator name="dummy_motor_l2">
       <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
 
-  <transmission name="dummy_tran_2">
+  <transmission name="dummy_tran_l3">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="dummy_joint_2">
+    <joint name="dummy_joint_l3">
       <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
-    <actuator name="center_motor_2">
+    <actuator name="dummy_motor_l3">
       <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>

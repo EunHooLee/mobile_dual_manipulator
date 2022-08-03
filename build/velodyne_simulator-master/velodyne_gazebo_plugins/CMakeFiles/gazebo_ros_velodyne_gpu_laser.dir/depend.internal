@@ -563,6 +563,7 @@ velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne
  /usr/include/ignition/common3/ignition/common/profiler/Export.hh
  /usr/include/ignition/common3/ignition/common/profiler/detail/Export.hh
  /usr/include/ignition/math6/ignition/math.hh
+ /usr/include/ignition/math6/ignition/math/AdditivelySeparableScalarField3.hh
  /usr/include/ignition/math6/ignition/math/Angle.hh
  /usr/include/ignition/math6/ignition/math/AxisAlignedBox.hh
  /usr/include/ignition/math6/ignition/math/Box.hh
@@ -577,6 +578,7 @@ velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne
  /usr/include/ignition/math6/ignition/math/GaussMarkovProcess.hh
  /usr/include/ignition/math6/ignition/math/Helpers.hh
  /usr/include/ignition/math6/ignition/math/Inertial.hh
+ /usr/include/ignition/math6/ignition/math/Interval.hh
  /usr/include/ignition/math6/ignition/math/Kmeans.hh
  /usr/include/ignition/math6/ignition/math/Line2.hh
  /usr/include/ignition/math6/ignition/math/Line3.hh
@@ -585,13 +587,17 @@ velodyne_simulator-master/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne
  /usr/include/ignition/math6/ignition/math/MaterialType.hh
  /usr/include/ignition/math6/ignition/math/Matrix3.hh
  /usr/include/ignition/math6/ignition/math/Matrix4.hh
+ /usr/include/ignition/math6/ignition/math/Matrix6.hh
  /usr/include/ignition/math6/ignition/math/MovingWindowFilter.hh
  /usr/include/ignition/math6/ignition/math/OrientedBox.hh
  /usr/include/ignition/math6/ignition/math/PID.hh
+ /usr/include/ignition/math6/ignition/math/PiecewiseScalarField3.hh
  /usr/include/ignition/math6/ignition/math/Plane.hh
+ /usr/include/ignition/math6/ignition/math/Polynomial3.hh
  /usr/include/ignition/math6/ignition/math/Pose3.hh
  /usr/include/ignition/math6/ignition/math/Quaternion.hh
  /usr/include/ignition/math6/ignition/math/Rand.hh
+ /usr/include/ignition/math6/ignition/math/Region3.hh
  /usr/include/ignition/math6/ignition/math/RollingMean.hh
  /usr/include/ignition/math6/ignition/math/RotationSpline.hh
  /usr/include/ignition/math6/ignition/math/SemanticVersion.hh

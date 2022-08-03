@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
+export LD_LIBRARY_PATH='/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu:/home/leh/ws_moveit/devel/lib:/home/user_name/.mujoco/mujoco210/bin:/usr/lib/nvidia:/home/leh/.mujoco/mujoco210/bin'
+export PKG_CONFIG_PATH='/opt/ros/noetic/lib/pkgconfig:/opt/ros/noetic/lib/x86_64-linux-gnu/pkgconfig:/home/leh/ws_moveit/devel/lib/pkgconfig'
 export PWD='/home/leh/catkin_ws/build'
+export PYTHONPATH='/opt/ros/noetic/lib/python3/dist-packages'
